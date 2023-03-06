@@ -15,8 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('letter');
             $table->string('type');
+            $table->boolean('Upper');
             $table->string('sound');
-            $table->string('image');
+            $table->string('video');
             $table->timestamps();
         });
     }
