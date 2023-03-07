@@ -17,7 +17,7 @@ class FlipCardSeeder extends Seeder
             'type'=>'vowel',
             'Upper'=>true,
             'sound'=>'',
-            'video'=>'play.micukids.com/play/flipcards/back/A_animation.mp4'
+            'video'=>'http://play.micukids.com/play/flipcards/back/A_animation.mp4'
             ]);
         DB::table('letters')->insert([
             'letter'=>'B',
