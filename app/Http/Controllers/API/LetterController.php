@@ -12,7 +12,11 @@ class LetterController extends Controller
      */
     public function index()
     {
-        //
+        $letters = Letter::all();
+        return response()->json([ 
+            "letters" => $letters
+        ]);
+
     }
 
     /**
