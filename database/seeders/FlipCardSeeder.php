@@ -17,21 +17,21 @@ class FlipCardSeeder extends Seeder
             'type'=>'vowel',
             'Upper'=>true,
             'sound'=>'',
-            'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/A_animation.mp4'
+            'video'=>'play.micukids.com/play/flipcards/back/A_animation.mp4'
             ]);
         DB::table('letters')->insert([
             'letter'=>'B',
             'type'=>'consonant',
             'Upper'=>true,
             'sound'=>'',
-            'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/B_animation.mp4'
+            'video'=>'play.micukids.com/play/flipcards/back/B_animation.mp4'
             ]);
         DB::table('letters')->insert([
             'letter'=>'C',
             'type'=>'consonant',
             'Upper'=>true,
             'sound'=>'',
-            'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/C_animation.mp4'
+            'video'=>'play.micukids.com/play/flipcards/back/C_animation.mp4'
             ]);
         DB::table('letters')->insert([
             'letter'=>'CH',
