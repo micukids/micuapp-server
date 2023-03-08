@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('letters', function (Blueprint $table) {
             $table->id();
-            $table->string('letter');
+            $table->string('upper');
             $table->string('type');
-            $table->boolean('Upper');
+            $table->string('lower');
             $table->string('sound');
             $table->string('video');
             $table->timestamps();

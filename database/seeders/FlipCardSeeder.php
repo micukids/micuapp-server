@@ -13,404 +13,206 @@ class FlipCardSeeder extends Seeder
     public function run(): void
     {
         DB::table('letters')->insert([
-            'letter'=>'A',
+            'upper'=>'A',
             'type'=>'vowel',
-            'Upper'=>true,
+            'lower'=>'a',
             'sound'=>'',
-            'video'=>'http://play.micukids.com/play/flipcards/back/A_animation.mp4'
+            'video'=>'https://play.micukids.com/play/flipcards/back/A_animation.mp4'
             ]);
         DB::table('letters')->insert([
-            'letter'=>'B',
+            'upper'=>'B',
             'type'=>'consonant',
-            'Upper'=>true,
+            'lower'=>'b',
             'sound'=>'',
-            'video'=>'play.micukids.com/play/flipcards/back/B_animation.mp4'
+            'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/B_animation.mp4'
             ]);
         DB::table('letters')->insert([
-            'letter'=>'C',
+            'upper'=>'C',
             'type'=>'consonant',
-            'Upper'=>true,
+            'lower'=>'c',
             'sound'=>'',
-            'video'=>'play.micukids.com/play/flipcards/back/C_animation.mp4'
+            'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/C_animation.mp4'
             ]);
         DB::table('letters')->insert([
-            'letter'=>'CH',
+            'upper'=>'CH',
             'type'=>'consonant',
-            'Upper'=>true,
+            'lower'=>'ch',
             'sound'=>'',
-            'video'=>'play.micukids.com/play/flipcards/back/CH_animation.mp4'
+            'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/CH_animation.mp4'
             ]);
         DB::table('letters')->insert([
-            'letter'=>'D',
+            'upper'=>'D',
             'type'=>'consonant',
-            'Upper'=>true,
+            'lower'=>'d',
             'sound'=>'',
-            'video'=>'play.micukids.com/play/flipcards/back/D_animation.mp4'
+            'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/D_animation.mp4'
             ]);
         DB::table('letters')->insert([
-            'letter'=>'E',
+            'upper'=>'E',
             'type'=>'vowel',
-            'Upper'=>true,
+            'lower'=>'e',
             'sound'=>'',
-            'video'=>'play.micukids.com/play/flipcards/back/E_animation.mp4'
+            'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/E_animation.mp4'
             ]);
         DB::table('letters')->insert([
-            'letter'=>'F',
+            'upper'=>'F',
             'type'=>'consonant',
-            'Upper'=>true,
+            'lower'=>'f',
             'sound'=>'',
-            'video'=>'play.micukids.com/play/flipcards/back/F_animation.mp4'
+            'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/F_animation.mp4'
             ]);
         DB::table('letters')->insert([
-            'letter'=>'G',
+            'upper'=>'G',
             'type'=>'consonant',
-            'Upper'=>true,
+            'lower'=>'g',
             'sound'=>'',
-            'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/G_animation.mp4'
+            'video'=>'https://play.micukids.com/play/flipcards/back/G_animation.mp4'
             ]);
         DB::table('letters')->insert([
-            'letter'=>'H',
+            'upper'=>'H',
             'type'=>'consonant',
-            'Upper'=>true,
+            'lower'=>'h',
             'sound'=>'',
-            'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/H_animation.mp4'
+            'video'=>'https://play.micukids.com/play/flipcards/back/H_animation.mp4'
             ]);
         DB::table('letters')->insert([
-            'letter'=>'I',
+            'upper'=>'I',
             'type'=>'vowel',
-            'Upper'=>true,
+            'lower'=>'i',
             'sound'=>'',
-            'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/I_animation.mp4'
+            'video'=>'https://play.micukids.com/play/flipcards/back/I_animation.mp4'
             ]);
         DB::table('letters')->insert([
-            'letter'=>'J',
+            'upper'=>'J',
             'type'=>'consonant',
-            'Upper'=>true,
+            'lower'=>'j',
             'sound'=>'',
-            'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/J_animation.mp4'
+            'video'=>'https://play.micukids.com/play/flipcards/back/J_animation.mp4'
             ]);
         DB::table('letters')->insert([
-            'letter'=>'K',
+            'upper'=>'K',
             'type'=>'consonant',
-            'Upper'=>true,
+            'lower'=>'k',
             'sound'=>'',
-            'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/K_animation.mp4'
+            'video'=>'https://play.micukids.com/play/flipcards/back/K_animation.mp4'
             ]);
         DB::table('letters')->insert([
-            'letter'=>'L',
+            'upper'=>'L',
             'type'=>'consonant',
-            'Upper'=>true,
+            'lower'=>'l',
             'sound'=>'',
-            'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/L_animation.mp4'
+            'video'=>'https://play.micukids.com/play/flipcards/back/L_animation.mp4'
             ]);
         DB::table('letters')->insert([
-            'letter'=>'LL',
+            'upper'=>'LL',
             'type'=>'consonant',
-            'Upper'=>true,
+            'lower'=>'ll',
             'sound'=>'',
-            'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/LL_animation.mp4'
+            'video'=>'https://play.micukids.com/play/flipcards/back/LL_animation.mp4'
             ]);
         DB::table('letters')->insert([
-            'letter'=>'M',
+            'upper'=>'M',
             'type'=>'consonant',
-            'Upper'=>true,
+            'lower'=>'m',
             'sound'=>'',
-            'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/M_animation.mp4'
+            'video'=>'https://play.micukids.com/play/flipcards/back/M_animation.mp4'
             ]);
         DB::table('letters')->insert([
-            'letter'=>'N',
+            'upper'=>'N',
             'type'=>'consonant',
-            'Upper'=>true,
+            'lower'=>'n',
             'sound'=>'',
-            'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/N_animation.mp4'
+            'video'=>'https://play.micukids.com/play/flipcards/back/N_animation.mp4'
             ]);
         DB::table('letters')->insert([
-            'letter'=>'Ñ',
+            'upper'=>'Ñ',
             'type'=>'consonant',
-            'Upper'=>true,
+            'lower'=>'ñ',
             'sound'=>'',
-            'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/N2_animation.mp4'
+            'video'=>'https://play.micukids.com/play/flipcards/back/N2_animation.mp4'
             ]);
         DB::table('letters')->insert([
-            'letter'=>'O',
+            'upper'=>'O',
             'type'=>'vowel',
-            'Upper'=>true,
+            'lower'=>'o',
             'sound'=>'',
-            'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/O_animation.mp4'
+            'video'=>'https://play.micukids.com/play/flipcards/back/O_animation.mp4'
             ]);
         DB::table('letters')->insert([
-            'letter'=>'P',
+            'upper'=>'P',
             'type'=>'consonant',
-            'Upper'=>true,
+            'lower'=>'p',
             'sound'=>'',
-            'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/P_animation.mp4'
+            'video'=>'https://play.micukids.com/play/flipcards/back/P_animation.mp4'
             ]);
         DB::table('letters')->insert([
-            'letter'=>'Q',
+            'upper'=>'Q',
             'type'=>'consonant',
-            'Upper'=>true,
+            'lower'=>'q',
             'sound'=>'',
-            'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/Q_animation.mp4'
+            'video'=>'https://play.micukids.com/play/flipcards/back/Q_animation.mp4'
             ]);
         DB::table('letters')->insert([
-            'letter'=>'R',
+            'upper'=>'R',
             'type'=>'consonant',
-            'Upper'=>true,
+            'lower'=>'r',
             'sound'=>'',
-            'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/R_animation.mp4'
+            'video'=>'https://play.micukids.com/play/flipcards/back/R_animation.mp4'
             ]);
         DB::table('letters')->insert([
-            'letter'=>'S',
+            'upper'=>'S',
             'type'=>'consonant',
-            'Upper'=>true,
+            'lower'=>'s',
             'sound'=>'',
-            'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/S_animation.mp4'
+            'video'=>'https://play.micukids.com/play/flipcards/back/S_animation.mp4'
             ]);
         DB::table('letters')->insert([
-            'letter'=>'T',
+            'upper'=>'T',
             'type'=>'consonant',
-            'Upper'=>true,
+            'lower'=>'t',
             'sound'=>'',
-            'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/T_animation.mp4'
+            'video'=>'https://play.micukids.com/play/flipcards/back/T_animation.mp4'
             ]);
         DB::table('letters')->insert([
-            'letter'=>'U',
+            'upper'=>'U',
             'type'=>'vowel',
-            'Upper'=>true,
+            'lower'=>'u',
             'sound'=>'',
-            'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/U_animation.mp4'
+            'video'=>'https://play.micukids.com/play/flipcards/back/U_animation.mp4'
             ]);
         DB::table('letters')->insert([
-            'letter'=>'V',
+            'upper'=>'V',
             'type'=>'consonant',
-            'Upper'=>true,
+            'lower'=>'v',
             'sound'=>'',
-            'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/V_animation.mp4'
+            'video'=>'https://play.micukids.com/play/flipcards/back/V_animation.mp4'
             ]);
         DB::table('letters')->insert([
-            'letter'=>'W',
+            'upper'=>'W',
             'type'=>'consonant',
-            'Upper'=>true,
+            'lower'=>'w',
             'sound'=>'',
-            'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/W_animation.mp4'
+            'video'=>'https://play.micukids.com/play/flipcards/back/W_animation.mp4'
             ]);
         DB::table('letters')->insert([
-            'letter'=>'X',
+            'upper'=>'X',
             'type'=>'consonant',
-            'Upper'=>true,
+            'lower'=>'x',
             'sound'=>'',
-            'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/X_animation.mp4'
+            'video'=>'https://play.micukids.com/play/flipcards/back/X_animation.mp4'
             ]);
         DB::table('letters')->insert([
-            'letter'=>'Y',
+            'upper'=>'Y',
             'type'=>'consonant',
-            'Upper'=>true,
+            'lower'=>'y',
             'sound'=>'',
-            'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/Y_animation.mp4'
+            'video'=>'https://play.micukids.com/play/flipcards/back/Y_animation.mp4'
             ]);
         DB::table('letters')->insert([
-            'letter'=>'Z',
+            'upper'=>'Z',
             'type'=>'consonant',
-            'Upper'=>true,
+            'lower'=>'z',
             'sound'=>'',
-            'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/Z_animation.mp4'
+            'video'=>'https://play.micukids.com/play/flipcards/back/Z_animation.mp4'
             ]);
-
-            DB::table('letters')->insert([
-                'letter'=>'a',
-                'type'=>'vowel',
-                'Upper'=>false,
-                'sound'=>'',
-                'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/A_animation.mp4'
-                ]);
-            DB::table('letters')->insert([
-                'letter'=>'b',
-                'type'=>'consonant',
-                'Upper'=>false,
-                'sound'=>'',
-                'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/B_animation.mp4'
-                ]);
-            DB::table('letters')->insert([
-                'letter'=>'c',
-                'type'=>'consonant',
-                'Upper'=>false,
-                'sound'=>'',
-                'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/C_animation.mp4'
-                ]);
-            DB::table('letters')->insert([
-                'letter'=>'ch',
-                'type'=>'consonant',
-                'Upper'=>false,
-                'sound'=>'',
-                'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/CH_animation.mp4'
-                ]);
-            DB::table('letters')->insert([
-                'letter'=>'d',
-                'type'=>'consonant',
-                'Upper'=>false,
-                'sound'=>'',
-                'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/D_animation.mp4'
-                ]);
-            DB::table('letters')->insert([
-                'letter'=>'e',
-                'type'=>'vowel',
-                'Upper'=>false,
-                'sound'=>'',
-                'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/E_animation.mp4'
-                ]);
-            DB::table('letters')->insert([
-                'letter'=>'f',
-                'type'=>'consonant',
-                'Upper'=>false,
-                'sound'=>'',
-                'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/F_animation.mp4'
-                ]);
-            DB::table('letters')->insert([
-                'letter'=>'g',
-                'type'=>'consonant',
-                'Upper'=>false,
-                'sound'=>'',
-                'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/G_animation.mp4'
-                ]);
-            DB::table('letters')->insert([
-                'letter'=>'h',
-                'type'=>'consonant',
-                'Upper'=>false,
-                'sound'=>'',
-                'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/H_animation.mp4'
-                ]);
-            DB::table('letters')->insert([
-                'letter'=>'i',
-                'type'=>'vowel',
-                'Upper'=>false,
-                'sound'=>'',
-                'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/I_animation.mp4'
-                ]);
-            DB::table('letters')->insert([
-                'letter'=>'j',
-                'type'=>'consonant',
-                'Upper'=>false,
-                'sound'=>'',
-                'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/J_animation.mp4'
-                ]);
-            DB::table('letters')->insert([
-                'letter'=>'k',
-                'type'=>'consonant',
-                'Upper'=>false,
-                'sound'=>'',
-                'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/K_animation.mp4'
-                ]);
-            DB::table('letters')->insert([
-                'letter'=>'l',
-                'type'=>'consonant',
-                'Upper'=>false,
-                'sound'=>'',
-                'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/L_animation.mp4'
-                ]);
-            DB::table('letters')->insert([
-                'letter'=>'m',
-                'type'=>'consonant',
-                'Upper'=>false,
-                'sound'=>'',
-                'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/M_animation.mp4'
-                ]);
-            DB::table('letters')->insert([
-                'letter'=>'n',
-                'type'=>'consonant',
-                'Upper'=>false,
-                'sound'=>'',
-                'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/N_animation.mp4'
-                ]);
-            DB::table('letters')->insert([
-                'letter'=>'ñ',
-                'type'=>'consonant',
-                'Upper'=>false,
-                'sound'=>'',
-                'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/N2_animation.mp4'
-                ]);
-            DB::table('letters')->insert([
-                'letter'=>'o',
-                'type'=>'vowel',
-                'Upper'=>false,
-                'sound'=>'',
-                'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/O_animation.mp4'
-                ]);
-            DB::table('letters')->insert([
-                'letter'=>'p',
-                'type'=>'consonant',
-                'Upper'=>false,
-                'sound'=>'',
-                'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/P_animation.mp4'
-                ]);
-            DB::table('letters')->insert([
-                'letter'=>'q',
-                'type'=>'consonant',
-                'Upper'=>false,
-                'sound'=>'',
-                'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/Q_animation.mp4'
-                ]);
-            DB::table('letters')->insert([
-                'letter'=>'r',
-                'type'=>'consonant',
-                'Upper'=>false,
-                'sound'=>'',
-                'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/R_animation.mp4'
-                ]);
-            DB::table('letters')->insert([
-                'letter'=>'s',
-                'type'=>'consonant',
-                'Upper'=>false,
-                'sound'=>'',
-                'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/S_animation.mp4'
-                ]);
-            DB::table('letters')->insert([
-                'letter'=>'t',
-                'type'=>'consonant',
-                'Upper'=>false,
-                'sound'=>'',
-                'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/T_animation.mp4'
-                ]);
-            DB::table('letters')->insert([
-                'letter'=>'u',
-                'type'=>'vowel',
-                'Upper'=>false,
-                'sound'=>'',
-                'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/U_animation.mp4'
-                ]);
-            DB::table('letters')->insert([
-                'letter'=>'v',
-                'type'=>'consonant',
-                'Upper'=>false,
-                'sound'=>'',
-                'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/V_animation.mp4'
-                ]);
-            DB::table('letters')->insert([
-                'letter'=>'w',
-                'type'=>'consonant',
-                'Upper'=>false,
-                'sound'=>'',
-                'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/W_animation.mp4'
-                ]);
-            DB::table('letters')->insert([
-                'letter'=>'x',
-                'type'=>'consonant',
-                'Upper'=>false,
-                'sound'=>'',
-                'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/X_animation.mp4'
-                ]);
-            DB::table('letters')->insert([
-                'letter'=>'y',
-                'type'=>'consonant',
-                'Upper'=>false,
-                'sound'=>'',
-                'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/Y_animation.mp4'
-                ]);
-            DB::table('letters')->insert([
-                'letter'=>'z',
-                'type'=>'consonant',
-                'Upper'=>false,
-                'sound'=>'',
-                'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/Z_animation.mp4'
-                ]);
-    }
-}
+            }}
