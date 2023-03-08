@@ -17,3 +17,4 @@ class LetterController extends Controller
 
     }
 }
+?>
