@@ -24,42 +24,42 @@ class FlipCardSeeder extends Seeder
             'type'=>'consonant',
             'lower'=>'b',
             'sound'=>'',
-            'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/B_animation.mp4'
+            'video'=>'https://play.micukids.com/play/flipcards/back/B_animation.mp4'
             ]);
         DB::table('letters')->insert([
             'upper'=>'C',
             'type'=>'consonant',
             'lower'=>'c',
             'sound'=>'',
-            'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/C_animation.mp4'
+            'video'=>'https://play.micukids.com/play/flipcards/back/C_animation.mp4'
             ]);
         DB::table('letters')->insert([
             'upper'=>'CH',
             'type'=>'consonant',
             'lower'=>'ch',
             'sound'=>'',
-            'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/CH_animation.mp4'
+            'video'=>'https://play.micukids.com/play/flipcards/back/CH_animation.mp4'
             ]);
         DB::table('letters')->insert([
             'upper'=>'D',
             'type'=>'consonant',
             'lower'=>'d',
             'sound'=>'',
-            'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/D_animation.mp4'
+            'video'=>'https://play.micukids.com/play/flipcards/back/D_animation.mp4'
             ]);
         DB::table('letters')->insert([
             'upper'=>'E',
             'type'=>'vowel',
             'lower'=>'e',
             'sound'=>'',
-            'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/E_animation.mp4'
+            'video'=>'https://play.micukids.com/play/flipcards/back/E_animation.mp4'
             ]);
         DB::table('letters')->insert([
             'upper'=>'F',
             'type'=>'consonant',
             'lower'=>'f',
             'sound'=>'',
-            'video'=>'play.micukids.com@play.micukids.com/play/flipcards/back/F_animation.mp4'
+            'video'=>'https://play.micukids.com/play/flipcards/back/F_animation.mp4'
             ]);
         DB::table('letters')->insert([
             'upper'=>'G',
