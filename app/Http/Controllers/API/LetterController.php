@@ -16,5 +16,13 @@ class LetterController extends Controller
         ]);
 
     }
+    public function showvowels(){
+        $vowels = Letter::showvowels();
+        return response()->json([ 
+            "vowels" => $vowels
+        ]);
+
+    }
+   
 }
 ?>

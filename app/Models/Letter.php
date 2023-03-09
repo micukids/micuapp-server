@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Letter extends Model
 {
     use HasFactory;
+
+    static function showvowels()
+    {
+        $vowel= Letter::where('type','vowel')->get();
+        return $vowel;
+    }
 }
