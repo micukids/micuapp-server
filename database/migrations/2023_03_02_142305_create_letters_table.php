@@ -13,9 +13,8 @@ return new class extends Migration
     {
         Schema::create('letters', function (Blueprint $table) {
             $table->id();
-            $table->string('upper');
+            $table->string('letter');
             $table->string('type');
-            $table->string('lower');
             $table->string('sound');
             $table->string('video');
             $table->timestamps();
