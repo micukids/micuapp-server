@@ -13,6 +13,13 @@ class Letter extends Model
         $vowel= Letter::where('type','vowel')->get();
         return $vowel;
     }
+
+    static function showlettersName($letter)
+    {
+        $letterName= Letter::where('letter',$letter)->get();
+        return $letterName;
+    }
+    
     public function users(){
         return $this->belongsToMany(User::class,'letter_user');
     }

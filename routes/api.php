@@ -15,3 +15,4 @@ Route::middleware('auth:sanctum')->group(function () {
 
 Route::get('/letters', [LetterController::class,'index'])->name('letters');
 Route::get('/vowels', [LetterController::class,'showvowels'])->name('vowels');
+Route::get('/lettersName', [LetterController::class,'lettersName'])->name('lettersName');
