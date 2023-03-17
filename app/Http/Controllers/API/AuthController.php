@@ -11,7 +11,7 @@ use App\Models\User;
 class AuthController extends Controller
 {
     public function register(Request $request){
-        //validations
+       
         $validator = Validator::make($request->all(),[
             'name'=>'required|min:2|max:12',
             'parent'=>'required|min:2|max:12',
