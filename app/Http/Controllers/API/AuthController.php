@@ -60,7 +60,14 @@ class AuthController extends Controller
                     'message'=>'Email o password no válido.'
                 ]);
             } else {
-                $token = $user->createToken($user->email.'_Token')->plainTextToken;
+
+                if( $user->role_as == 1){
+                    $token =  $user->createToken($user->email.'_AdminToken', ['server:admin'])->plainTextToken;
+                }else {
+
+                    $token = $user->createToken($user->email.'_Token', [''])->plainTextToken;
+                }
+                
 
                 return response()->json([
                     'status'=>200,
