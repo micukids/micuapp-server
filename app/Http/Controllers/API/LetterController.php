@@ -21,7 +21,6 @@ class LetterController extends Controller
         return response()->json([ 
             "vowels" => $vowels
         ]);
-
     }
    
 }
