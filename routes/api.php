@@ -9,10 +9,13 @@ use App\Http\Controllers\API\AuthController;
 Route::post('register', [AuthController::class,'register']);
 Route::post('login', [AuthController::class,'login']);
 
-Route::middleware(['auth:sanctum', 'IsAPIAdmin'])->group(function () {
+Route::middleware(['auth:sanctum','IsAPIAdmin'])->group(function () {
 
     Route::get('/checkingAuthenticated', function () {
-        return response()->json(['message'=>'estas dentro', 'status'=>200], 200);
+        return response()->json([
+            'message'=>'estas dentro',
+             'status'=>200,
+            ], 200);
     });
 
 });
