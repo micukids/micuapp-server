@@ -9,7 +9,7 @@ use App\Http\Controllers\API\AuthController;
 Route::post('register', [AuthController::class,'register']);
 Route::post('login', [AuthController::class,'login']);
 
-Route::middleware(['auth:sanctum','IsAPIAdmin'])->group(function () {
+Route::middleware(['auth:sanctum', 'ability:server:admin'])->group(function () {
 
     Route::get('/checkingAuthenticated', function () {
         return response()->json([
@@ -25,5 +25,11 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::post('logout', [AuthController::class,'logout']);
 });
 
-Route::get('/letters', [LetterController::class,'index'])->name('letters');
-Route::get('/vowels', [LetterController::class,'showvowels'])->name('vowels');
+Route::controller(LetterController::class)->group(function () {
+    Route::get('/letters', 'index');
+    Route::get('/vowels', 'showvowels');
+    Route::post('/letter', 'store');
+    Route::get('/letter/{id}', 'show');
+    Route::put('/letter/{id}', 'update');
+    Route::delete('/letter/{id}', 'destroy');
+});
