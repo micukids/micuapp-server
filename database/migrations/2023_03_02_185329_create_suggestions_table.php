@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('suggestions', function (Blueprint $table) {
             $table->id();
-            $table->string('type');
+            $table->string('title');
             $table->string('image');
             $table->string('url');
             $table->string('description');
