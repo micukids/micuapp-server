@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Facades\Hash;
 use App\Models\User;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 
 class AuthController extends Controller
 {
@@ -20,65 +20,76 @@ class AuthController extends Controller
 
         ]);
 
-        if($validator->fails())
-        {
+        if ($validator->fails()) {
             return response()->json([
-               'validation_errors'=>$validator->messages(), 
+                'validation_errors' => $validator->messages(),
             ]);
         } else {
             $user = User::create([
-                'name'=>$request->name,
-                'parent'=>$request->parent,
-                'email'=>$request->email,
-                'password'=>Hash::make($request->password),
+                'name' => $request->name,
+                'parent' => $request->parent,
+                'email' => $request->email,
+                'password' => Hash::make($request->password),
             ]);
 
-            $token = $user->createToken( $user->email.'_Token')->plainTextToken;
+            $token = $user->createToken($user->email . '_Token')->plainTextToken;
 
             return response()->json([
-                'status'=>200,
-                'username'=>$user->name,
-                'token'=> $token,
-                'message'=>'Te has registrado correctamente!',
-             ]);
+                'status' => 200,
+                'username' => $user->name,
+                'token' => $token,
+                'message' => 'Te has registrado correctamente!',
+            ]);
         }
     }
-    public function login(Request $request){
-        $credentials= Validator::make($request->all(),[
-            'email'=>'required|email|max:191',
-            'password'=>'required'
+    public function login(Request $request)
+    {
+        $credentials = Validator::make($request->all(), [
+            'email' => 'required|email|max:191',
+            'password' => 'required',
         ]);
-        if ($credentials->fails()){
+
+        if ($credentials->fails()) {
             return response()->json([
-                'validation_errors'=>$credentials->messages(),
+                'validation_errors' => $credentials->messages(),
             ]);
-        } else{
-            $user =User::where('email',$request->email)->first();
-            if(! $user || ! Hash::check($request->password, $user->password)){
+        } else {
+            $user = User::where('email', $request->email)->first();
+            if (!$user || !Hash::check($request->password, $user->password)) {
                 return response()->json([
-                    'status'=>401,
-                    'message'=>'Email o password no válido.'
+                    'status' => 401,
+                    'message' => 'Email o password no válido.',
                 ]);
             } else {
-                $token = $user->createToken($user->email.'_Token')->plainTextToken;
+
+                if ($user->role_as == 1) {
+                    $role = 'admin';
+                    $token = $user->createToken($user->email . '_AdminToken', ['server:admin'])->plainTextToken;
+
+                } else {
+                    $role = '';
+                    $token = $user->createToken($user->email . '_Token', [''])->plainTextToken;
+                }
 
                 return response()->json([
-                    'status'=>200,
-                    'username'=>$user->name,
-                    'token'=>$token,
-                    'message'=>'Has ingresado correctamente'
+                    'status' => 200,
+                    'username' => $user->name,
+                    'token' => $token,
+                    'message' => 'Has ingresado correctamente',
+                    'role'=> $role,
                 ]);
             }
         }
     }
 
-    public function logout(){
+    public function logout()
+    {
         auth()->user()->tokens()->delete();
         return response()->json([
-         'status'=>200,
-         'message'=>'Has cerrado la sesión exitosamente'
+            'status' => 200,
+            'message' => 'Has cerrado la sesión exitosamente',
         ]);
- 
-     }
+
+    }
 
 }
