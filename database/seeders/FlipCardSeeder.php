@@ -211,7 +211,7 @@ class FlipCardSeeder extends Seeder
         DB::table('letters')->insert([
             'letter'=>'Z',
             'type'=>'consonant',
-            'sound'=>'https://play.micukids.com/play/memorycards/audio/z_zapato.mp3',
+            'sound'=>'https://play.micukids.com/play/memorycards/audio/z_zapatos.mp3',
             'image'=>'https://play.micukids.com/play/memorycards/back/Z.jpg',
             'video'=>'https://play.micukids.com/play/flipcards/back/Z_animation.mp4'
             ]);
