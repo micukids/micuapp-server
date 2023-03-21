@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Letter;
+use Illuminate\Support\Facades\Validator;
 
 class LetterController extends Controller
 {
@@ -26,16 +27,36 @@ class LetterController extends Controller
 
     public function store(Request $request)
     {
-        $letter = new Letter();
-        $letter->name = $request->name;
-        $letter->parent = $request->parent;
-        $letter->audio = $request->audio;
-        $letter->image = $request->image;
-        $letter->video = $request->video;
+        $validator = Validator::make($request->all(), [
+            'letter' => 'required|min:1|max:2',
+            'type' => 'required|min:2|max:12',
+            'sound' => 'required|max:250',
+            'image' => 'required|max:250',
+            'video' => 'required|max:250',
+        ]);
 
-        $letter->save();
+        if ($validator->fails()) {
+            return response()->json([
+                'status' => 400,
+                'validation_errors' => $validator->messages(),
+            ]);
+        } else {
+            $letter = new Letter();
+            $letter->letter = $request->letter;
+            $letter->type = $request->type;
+            $letter->sound = $request->sound;
+            $letter->image = $request->image;
+            $letter->video = $request->video;
 
-        return $letter;
+            $letter->save();
+
+            return response()->json([
+                'status' => 200,
+                'letter' => $letter->letter,
+                'type' => $letter->type,
+                'message' => 'Letra registrada correctamente!',
+            ]);
+        }
     }
 
 
@@ -43,22 +64,40 @@ class LetterController extends Controller
     {
        $letter = Letter::find($id);
 
-       return $letter;
+       return response()->json([
+        'status' => 200,
+        'theletter' => $letter,
+       ]);
     }
 
 
     public function update(Request $request, $id)
     {
-        $letter = Letter::findOrFail($request->id);
-        $letter->name = $request->name;
-        $letter->parent = $request->parent;
-        $letter->audio = $request->audio;
-        $letter->image = $request->image;
-        $letter->video = $request->video;
+        $validator = Validator::make($request->all(), [
+            'letter' => 'required|min:1|max:2',
+            'type' => 'required|min:2|max:12',
+            'sound' => 'required|max:250',
+            'image' => 'required|max:250',
+            'video' => 'required|max:250',
+        ]);
 
-        $letter->save();
+        if ($validator->fails()) {
+            return response()->json([
+                'status' => 400,
+                'validation_errors' => $validator->messages(),
+            ]);
+        } else {
+            $letter = Letter::findOrFail($request->id);
+            $letter->letter = $request->letter;
+            $letter->type = $request->type;
+            $letter->sound = $request->sound;
+            $letter->image = $request->image;
+            $letter->video = $request->video;
 
-        return $letter;
+            $letter->save();
+
+            return $letter;
+        }
     }
 
 

@@ -17,7 +17,12 @@ Route::middleware(['auth:sanctum', 'ability:server:admin'])->group(function () {
              'status'=>200,
             ], 200);
     });
-
+    Route::controller(LetterController::class)->group(function () {
+        Route::post('/letter', 'store');
+        Route::get('/edit-letter/{id}', 'show');
+        Route::put('/letter/{id}', 'update');
+        Route::delete('/letter/{id}', 'destroy');
+    });
 });
 
 Route::middleware(['auth:sanctum'])->group(function () {
@@ -28,8 +33,4 @@ Route::middleware(['auth:sanctum'])->group(function () {
 Route::controller(LetterController::class)->group(function () {
     Route::get('/letters', 'index');
     Route::get('/vowels', 'showvowels');
-    Route::post('/letter', 'store');
-    Route::get('/letter/{id}', 'show');
-    Route::put('/letter/{id}', 'update');
-    Route::delete('/letter/{id}', 'destroy');
 });
