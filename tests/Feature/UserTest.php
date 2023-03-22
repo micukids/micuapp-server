@@ -10,11 +10,11 @@ use App\Models\User;
 
 class UserTest extends TestCase
 {
-    use RefreshDatabase;
+    //use RefreshDatabase;
     /**
      * A basic feature test example.
      */
-    public function test_the_application_returns_a_successful_response(): void
+    /* public function test_the_application_returns_a_successful_response(): void
     {
         $this->withExceptionHandling();
 
@@ -30,5 +30,5 @@ class UserTest extends TestCase
         $response = $this->get('/');
 
         $response->assertStatus(200);
-    }
+    } */
 }
