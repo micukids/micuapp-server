@@ -31,7 +31,7 @@ class SuggestionSeeder extends Seeder
             'title'=>"A, B, C, CH, D",
             'image'=>"https://pbs.twimg.com/media/Ey2-9CbWQAAf3Ct?format=jpg",
             'url'=>"https://www.youtube.com/watch?v=CjKX3X-ZKzw",
-            'description'=>"Marta Gómez, canción del abecedario para niños en castellano e Inglés para MicuKids",
+            'description'=>"Marta Gómez, canción del abecedario.",
          ]);
     }
 }

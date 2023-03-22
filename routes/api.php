@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\LetterController;
 use App\Http\Controllers\API\AuthController;
+use App\Http\Controllers\API\SuggestionController;
 
 
 Route::post('register', [AuthController::class,'register']);
@@ -34,3 +35,5 @@ Route::controller(LetterController::class)->group(function () {
     Route::get('/letters', 'index');
     Route::get('/vowels', 'showvowels');
 });
+
+Route::get('suggestions', [SuggestionController::Class, 'index']);
