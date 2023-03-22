@@ -18,6 +18,7 @@ Route::middleware(['auth:sanctum', 'ability:server:admin'])->group(function () {
              'status'=>200,
             ], 200);
     });
+    
     Route::controller(LetterController::class)->group(function () {
         Route::post('/letter', 'store');
         Route::get('/edit-letter/{id}', 'show');
