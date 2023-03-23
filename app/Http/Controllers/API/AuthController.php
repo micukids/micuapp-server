@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Notifications\WelcomeEmailNotification;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -33,6 +34,8 @@ class AuthController extends Controller
             ]);
 
             $token = $user->createToken($user->email . '_Token')->plainTextToken;
+
+            $user->notify(new WelcomeEmailNotification());
 
             return response()->json([
                 'status' => 200,
