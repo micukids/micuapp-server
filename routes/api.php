@@ -7,11 +7,10 @@ use App\Http\Controllers\API\AuthController;
 use App\Http\Controllers\API\SuggestionController;
 
 
-Route::post('register', [AuthController::class,'register']);
+Route::post('register', [AuthController::class,'register'])->name('signUp');
 Route::post('login', [AuthController::class,'login']);
 
 Route::middleware(['auth:sanctum', 'ability:server:admin'])->group(function () {
-
     Route::get('/checkingAuthenticated', function () {
         return response()->json([
             'message'=>'estas dentro',
@@ -37,4 +36,4 @@ Route::controller(LetterController::class)->group(function () {
     Route::get('/vowels', 'showvowels');
 });
 
-Route::get('suggestions', [SuggestionController::Class, 'index']);
+Route::get('suggestions', [SuggestionController::class, 'index']);

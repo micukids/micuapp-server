@@ -5,11 +5,10 @@ namespace Tests\Unit;
 use App\Models\User;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
 
 class UserTest extends TestCase
 {
-    use WithFaker;
+    use RefreshDatabase;
     public function test_user_duplication()
     {
         $user1 = User::make([
@@ -31,25 +30,21 @@ class UserTest extends TestCase
 
     public function test_user_creation()
     {
+        $this->withoutExceptionHandling();
 
-        $nameOne =$this->faker->firstNameFemale();
-        $parentOne =$this->faker->firstName();
-        $emailOne =$this->faker->freeEmail();
-        $passwordOne =$this->faker->password();
-
-        $response = $this->json(
-            'POST',
-            'register',
+        $response = $this->post(route('signUp'),
             [
-                'name' =>  $nameOne,
-                'parent' => $parentOne,
-                'email' => $emailOne,
-                'password' => $passwordOne,
+                'name' => 'Thiago',
+                'parent' => 'Julio',
+                'email' => 'juliomerino@gmail.com',
+                'password' => 'password01',
+                
             ]);
+        //dd($response);
+
         $response
-            ->assertStatus(200)
-            ->assertJson([
-                'creado'=>true,
-            ]);
+            ->assertStatus(200);
+            $this->assertCount(1, User::all());
+            
     }
 }
