@@ -40,11 +40,9 @@ class UserTest extends TestCase
                 'password' => 'password01',
                 
             ]);
-        //dd($response);
 
         $response
             ->assertStatus(200);
             $this->assertCount(1, User::all());
-            
     }
 }
