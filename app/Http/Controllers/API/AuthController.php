@@ -35,7 +35,7 @@ class AuthController extends Controller
 
             $token = $user->createToken($user->email . '_Token')->plainTextToken;
 
-            $user->notify(new WelcomeEmailNotification());
+            //$user->notify(new WelcomeEmailNotification());
 
             return response()->json([
                 'status' => 200,
