@@ -40,7 +40,6 @@ class WelcomeEmailNotification extends Notification
                     ->mailer('smtp')
                     ->subject('Te damos la bienvenida a MicuKids')
                     ->greeting('Hola!')
-                    ->attach('storage/logo_micu.png')
                     ->line('Muchas Gracias por registrate.')
                     ->action('Clica para ir a la página de inicio', url('http://localhost:3000'))
                     ->line('Disfruta de nuestro contenido!');
