@@ -4,12 +4,13 @@
 ## Tabla de Contenido
 
 1. [Información General](#información-general)
-2. Detalles tecnicos del Proyecto
+2. [Detalles tecnicos del Proyecto](#detalles tecnicos del proyecto)
 3. [Tecnologías](#tecnologías)
 4. [Herramientas](#herramientas)
 5. [Demo](#demo)
 6. [Prototipo](#prototipo)
-7. [Instalación](#instalación)
+7. [Equipo](#equipo)
+8. [Instalación](#instalación)
 
 ## :page_facing_up: Información General
 
@@ -21,7 +22,7 @@ El cliente necesita desarrollar una experiencia educativa para menores de 5 año
 
 Hemos utilizado Arquitetura MVC - Estilo cliente/servidor
 Tipo API Rest, para conectar los 2 servidores
-Tenemos 2 repositorios: uno para backend y otro para el frontend ( )
+Tenemos 2 repositorios: uno para backend y otro para el frontend (https://github.com/micukids/micuapp-client)
 
 ## :computer: Tecnologías
 
@@ -33,8 +34,7 @@ Tenemos 2 repositorios: uno para backend y otro para el frontend ( )
 
 * [Trello](https://trello.com/b/0PCr9sIS/micukids)
 * [Figma](https://www.figma.com/file/2Pv4uqNt5yERWkZO1Y2qsj/MicuKids?node-id=26-2&t=rA3yNeI7rYXOmzSG-0)
-* [GitHub]()
-* [GitHub/front]()
+* [GitHub]
 * Visual Studio Code
 
 ## :tv: Demo
@@ -44,5 +44,8 @@ Tenemos 2 repositorios: uno para backend y otro para el frontend ( )
 ## :loop: Prototipo
 
 * [Tablet]()
+
+## :two_women_holding_hands: Equipo
+
 
 ## :link: Instalación
