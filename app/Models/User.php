@@ -6,6 +6,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Notifications\Notification;
 use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
@@ -30,9 +31,17 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $hidden = [
-        'password',
+        //'password',
         'type',
         'remember_token',
     ];
 
+    public function routeNotificationForMail(Notification $notification): array|string
+    {
+        // Return email address only...
+        //return $this->email_address;
+ 
+        // Return email address and name...
+        return [$this->email => $this->name];
+    }
 }
