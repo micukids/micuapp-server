@@ -46,6 +46,13 @@ Tenemos 2 repositorios: uno para backend y otro para el frontend (https://github
 * [Tablet]()
 
 ## :two_women_holding_hands: Equipo
+Somos un equipo de 5 mujeres, apasionadas por el proyecto web MicuKids:
+
+- Karolina Vilarraga, UX/UI Design y desarrolladora
+- Elvia Benedith, Desarrolladora
+- Gabriela Barajas, Desarrolladora
+- Liliana Dalmarco, Scrum Master y desarrolladora
+- Isabel Gutiérrez, Desarrolladora
 
 
 ## :link: Instalación
