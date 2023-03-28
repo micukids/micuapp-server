@@ -47,4 +47,11 @@ class ContactController extends Controller
             ]);
         }
     }
+
+    public function destroy($id)
+    {
+        $contact = Contact::destroy($id);
+
+        return $contact;
+    }
 }
