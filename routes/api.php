@@ -5,10 +5,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\LetterController;
 use App\Http\Controllers\API\AuthController;
 use App\Http\Controllers\API\SuggestionController;
+use App\Http\Controllers\API\ContactController;
 
 
 Route::post('register', [AuthController::class,'register'])->name('signUp');
 Route::post('login', [AuthController::class,'login']);
+Route::post('contact', [ContactController::class,'store']);
 
 Route::middleware(['auth:sanctum', 'ability:server:admin'])->group(function () {
     Route::get('/checkingAuthenticated', function () {
