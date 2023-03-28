@@ -9,6 +9,14 @@ use Illuminate\Support\Facades\Validator;
 
 class ContactController extends Controller
 {
+    public function index()
+    {
+        $contacts = Contact::all();
+        return response()->json([ 
+            "contacts" => $contacts
+        ]);
+
+    }
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [

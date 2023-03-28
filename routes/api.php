@@ -34,6 +34,7 @@ Route::middleware(['auth:sanctum', 'ability:server:admin'])->group(function () {
         Route::delete('/suggestion/{id}', 'destroy');
     });
     
+    Route::get('contacts', [ContactController::class,'index']);
 });
 
 Route::middleware(['auth:sanctum'])->group(function () {
