@@ -24,6 +24,14 @@ Route::middleware(['auth:sanctum', 'ability:server:admin'])->group(function () {
         Route::put('/letter/{id}', 'update');
         Route::delete('/letter/{id}', 'destroy');
     });
+
+    Route::controller(SuggestionController::class)->group(function () {
+        Route::post('/suggestion', 'store');
+        Route::get('/suggestion/{id}', 'show');
+        Route::put('/suggestion/{id}', 'update');
+        Route::delete('/suggestion/{id}', 'destroy');
+    });
+    
 });
 
 Route::middleware(['auth:sanctum'])->group(function () {
