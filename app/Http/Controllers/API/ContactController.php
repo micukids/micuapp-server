@@ -9,6 +9,14 @@ use Illuminate\Support\Facades\Validator;
 
 class ContactController extends Controller
 {
+    public function index()
+    {
+        $contacts = Contact::all();
+        return response()->json([ 
+            "contacts" => $contacts
+        ]);
+
+    }
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -38,5 +46,12 @@ class ContactController extends Controller
                 'message' => 'Tu mensaje se ha registrado correctamente. Nos pondremos en contacto contigo muy pronto.',
             ]);
         }
+    }
+
+    public function destroy($id)
+    {
+        $contact = Contact::destroy($id);
+
+        return $contact;
     }
 }
