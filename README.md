@@ -4,7 +4,7 @@
 ## Tabla de Contenido
 
 1. [Información General](#información-general)
-2. Detalles tecnicos del Proyecto
+2. [Detalles Tecnicos del Proyecto](#detalles-tecnicos-del-proyecto)
 3. [Tecnologías](#tecnologías)
 4. [Herramientas](#herramientas)
 5. [Demo](#demo)
@@ -24,6 +24,9 @@ El cliente necesita desarrollar una experiencia educativa para menores de 5 año
 Hemos utilizado Arquitetura MVC - Estilo cliente/servidor
 Tipo API Rest, para conectar el fronted con el backend.
 Tenemos un proyecto en gitHub (micukids) con 2 repositorios: micuapp-server y micuapp-client (https://github.com/micukids/micuapp-client)
+Para empezar un nuevo proyecto, hay que crear una nueva base de datos y en el archivo (.env) cambiar en DB_DATABASE=nombre del proyecto.
+Hay que estar encendido el Xampp o Mamp para que funcione en el navegador. Después el la terminal hay que ejecutar el comando php artisan serve.
+
 
 ## :computer: Tecnologías
 
@@ -36,8 +39,8 @@ Tenemos un proyecto en gitHub (micukids) con 2 repositorios: micuapp-server y mi
 ## :hammer: Herramientas
 
 * [Trello](https://trello.com/b/0PCr9sIS/micukids)
-* [Figma](https://www.figma.com/file/2Pv4uqNt5yERWkZO1Y2qsj/MicuKids?node-id=26-2&t=rA3yNeI7rYXOmzSG-0)
-* [GitHub]
+* [Figma](https://www.figma.com/file/2Pv4uqNt5yERWkZO1Y2qsj/MicuKids?node-id=26-2&t=LuyHpaBODO5eLfgr-0)
+* [Git/GitHub](https://github.com/orgs/micukids/repositories)
 * Visual Studio Code
 * Xampp/Mamp
 
@@ -47,7 +50,7 @@ Tenemos un proyecto en gitHub (micukids) con 2 repositorios: micuapp-server y mi
 
 ## :loop: Prototipo
 
-* [Tablet]()
+* [Tablet](https://www.figma.com/file/2Pv4uqNt5yERWkZO1Y2qsj/MicuKids?node-id=26-2&t=LuyHpaBODO5eLfgr-0)
 
 ## :two_women_holding_hands: Equipo
 Somos un equipo de 5 mujeres, apasionadas por el proyecto web MicuKids:
