@@ -6,6 +6,7 @@ use App\Http\Controllers\API\LetterController;
 use App\Http\Controllers\API\AuthController;
 use App\Http\Controllers\API\SuggestionController;
 use App\Http\Controllers\API\ContactController;
+use App\Http\Controllers\API\DownloadController;
 
 
 Route::post('register', [AuthController::class,'register'])->name('signUp');
@@ -34,6 +35,10 @@ Route::middleware(['auth:sanctum', 'ability:server:admin'])->group(function () {
         Route::delete('/suggestion/{id}', 'destroy');
     });
     
+    Route::controller(ContactController::class)->group(function () {
+        Route::get('contacts','index');
+        Route::delete('/contact/{id}', 'destroy');
+    });
 });
 
 Route::middleware(['auth:sanctum'])->group(function () {
@@ -47,3 +52,11 @@ Route::controller(LetterController::class)->group(function () {
 });
 
 Route::get('suggestions', [SuggestionController::class, 'index']);
+
+Route::controller(DownloadController::class)->group(function () {
+    Route::get('/downloads', 'index');
+    Route::post('/download', 'store');
+    Route::get('/download/{id}', 'show');
+    Route::put('/download/{id}', 'update');
+    Route::delete('/download/{id}', 'delete');
+});
