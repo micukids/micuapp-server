@@ -15,7 +15,7 @@ class SuggestionSeeder extends Seeder
     {
         DB::table('suggestions')->insert([
            'title'=>"Flash cards",
-           'image'=>"https://images.squarespace-cdn.com/content/v1/6029f224610d6f1042e8e48e/1613995847616-4VTJIKLXM6QLHV7KGH9S/FotoABC_01.JPG",
+           'image'=>"https://play.micukids.com/play/sug/01_MicuFlashcards.jpg",
            'url'=>"https://www.micukids.com/",
            'description'=>"Tartejas borrables bilingües del abecedario",
         ]);
