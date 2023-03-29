@@ -13,8 +13,9 @@ return new class extends Migration
     {
         Schema::create('downloads', function (Blueprint $table) {
             $table->id();
-            $table->string('type');
+            $table->string('thumb');
             $table->string('url');
+            $table->string('description');
             $table->timestamps();
         });
     }
