@@ -34,8 +34,6 @@ class SuggestionSeeder extends Seeder
             'description'=>"Serie pionera en el estándar educativo",
          ]);
 
-
-
          DB::table('suggestions')->insert([
             'title'=>"Caballito de mar",
             'image'=>"https://play.micukids.com/play/sug/04_caballito.jpg",

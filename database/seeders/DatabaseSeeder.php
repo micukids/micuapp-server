@@ -6,6 +6,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Database\Seeders\FlipCardSeeder;
 use Database\Seeders\SuggestionsSeeder;
+use Database\Seeders\DownloadSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -23,6 +24,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             FlipCardSeeder::class,
             SuggestionSeeder::class,
+            DownloadSeeder::class,
         ]);
     }
 }
