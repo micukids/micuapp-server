@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Download;
+use Illuminate\Support\Facades\Validator;
 
 class DownloadController extends Controller
 {
