@@ -10,25 +10,41 @@ use App\Models\User;
 
 class UserTest extends TestCase
 {
-    //use RefreshDatabase;
-    /**
-     * A basic feature test example.
-     */
-    /* public function test_the_application_returns_a_successful_response(): void
+    use RefreshDatabase;
+    public function test_user_duplication()
     {
-        $this->withExceptionHandling();
+        $user1 = User::make([
+            'name' => 'Thiago',
+            'parent' => 'Julio',
+            'email' => 'julio@gmail.com',
+            'password' => 'password01'
+        ]);
 
-        Sanctum::actingAs(
-            User::factory()->create([
-                'name'=>'maria',
-                'parent'=>'maria',
-                'email'=>'maria@gmail.com',
-                'password'=>'password',
-            ])
-        );
+        $user2 = User::make([
+            'name' => 'Thiago',
+            'parent' => 'Julio',
+            'email' => 'juliomerino@gmail.com',
+            'password' => 'password01'
+        ]);
 
-        $response = $this->get('/');
+        $this->assertTrue($user1->email != $user2->email);
+    }
 
-        $response->assertStatus(200);
-    } */
+    public function test_user_creation()
+    {
+        $this->withoutExceptionHandling();
+
+        $response = $this->post(route('signUp'),
+            [
+                'name' => 'Thiago',
+                'parent' => 'Julio',
+                'email' => 'juliomerino@gmail.com',
+                'password' => 'password01',
+                
+            ]);
+
+        $response
+            ->assertStatus(200);
+            $this->assertCount(1, User::all());
+    }
 }
