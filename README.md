@@ -32,7 +32,7 @@ Hay que estar encendido el Xampp o Mamp para que funcione en el navegador. Despu
 
 * PHP (v8.1)
 * Laravel (v10.0)
-* phpSQL (v5)
+* MySQL (v5)
 * Composer (v2.5.1)
 * Node js (v18.12.1) 
 
