@@ -23,7 +23,7 @@ Route::middleware(['auth:sanctum', 'ability:server:admin'])->group(function () {
     
     Route::controller(LetterController::class)->group(function () {
         Route::post('/letter', 'store');
-        Route::get('/edit-letter/{id}', 'show');
+        Route::get('/letter/{id}', 'show');
         Route::put('/letter/{id}', 'update');
         Route::delete('/letter/{id}', 'destroy');
     });
@@ -38,6 +38,13 @@ Route::middleware(['auth:sanctum', 'ability:server:admin'])->group(function () {
     Route::controller(ContactController::class)->group(function () {
         Route::get('contacts','index');
         Route::delete('/contact/{id}', 'destroy');
+    });
+
+    Route::controller(DownloadController::class)->group(function () {
+        Route::post('/download', 'store');
+        Route::get('/download/{id}', 'show');
+        Route::put('/download/{id}', 'update');
+        Route::delete('/download/{id}', 'destroy');
     });
 });
 
@@ -55,8 +62,4 @@ Route::get('suggestions', [SuggestionController::class, 'index']);
 
 Route::controller(DownloadController::class)->group(function () {
     Route::get('/downloads', 'index');
-    Route::post('/download', 'store');
-    Route::get('/download/{id}', 'show');
-    Route::put('/download/{id}', 'update');
-    Route::delete('/download/{id}', 'delete');
 });
