@@ -24,7 +24,7 @@ El cliente necesita desarrollar una experiencia educativa para menores de 5 año
 Hemos utilizado Arquitetura MVC - Estilo cliente/servidor
 Tipo API Rest, para conectar el fronted con el backend.
 Tenemos un proyecto en gitHub (micukids) con 2 repositorios: micuapp-server y micuapp-client (https://github.com/micukids/micuapp-client)
-Para empezar un nuevo proyecto, hay que crear una nueva base de datos y en el archivo (.env) cambiar en DB_DATABASE=nombre del proyecto.
+Para empezar un nuevo proyecto, hay que crear una nueva base de datos y en el archivo (.env) cambiar en DB_DATABASE=micukids.
 Hay que estar encendido el Xampp o Mamp para que funcione en el navegador. Después el la terminal hay que ejecutar el comando **php artisan serve**
 
 
@@ -65,6 +65,7 @@ Somos un equipo de 5 mujeres, apasionadas por el proyecto web MicuKids:
 
 ## :link: Instalación
 1. Clonar Repositorio de GitHub
-2. Ejecutar **npm instal** en la terminal
-3. Ejecutar el comando **php artisan migrate**
-4. Ejecutar el comando **php artisan migrate:fresh --seed**
+2. Crear una base de datos en MySql con el nombre DB_micukids
+3. Ejecutar el comando **php artisan migrate:fresh --seed**
+4. Ejecutar **php artisan serve** para abrir en el navegador
+5. Para ejecutar los tests en Jest usa el comando **php artisan test**
