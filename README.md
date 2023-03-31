@@ -25,7 +25,7 @@ Hemos utilizado Arquitetura MVC - Estilo cliente/servidor
 Tipo API Rest, para conectar el fronted con el backend.
 Tenemos un proyecto en gitHub (micukids) con 2 repositorios: micuapp-server y micuapp-client (https://github.com/micukids/micuapp-client)
 Para empezar un nuevo proyecto, hay que crear una nueva base de datos y en el archivo (.env) cambiar en DB_DATABASE=nombre del proyecto.
-Hay que estar encendido el Xampp o Mamp para que funcione en el navegador. Después el la terminal hay que ejecutar el comando php artisan serve.
+Hay que estar encendido el Xampp o Mamp para que funcione en el navegador. Después el la terminal hay que ejecutar el comando **php artisan serve**
 
 
 ## :computer: Tecnologías
@@ -35,6 +35,7 @@ Hay que estar encendido el Xampp o Mamp para que funcione en el navegador. Despu
 * MySQL (v5)
 * Composer (v2.5.1)
 * Node js (v18.12.1) 
+* Laravel/Ui (v4.2.1)
 
 ## :hammer: Herramientas
 
@@ -64,6 +65,6 @@ Somos un equipo de 5 mujeres, apasionadas por el proyecto web MicuKids:
 
 ## :link: Instalación
 1. Clonar Repositorio de GitHub
-2. Ejecutar npm instal en la terminal
-3. Ejecutar el comando php artisan migrate
-4. Ejecutar el comando php artisan migrate:fresh --seed 
+2. Ejecutar **npm instal** en la terminal
+3. Ejecutar el comando **php artisan migrate**
+4. Ejecutar el comando **php artisan migrate:fresh --seed**
