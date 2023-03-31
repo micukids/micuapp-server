@@ -16,7 +16,7 @@
 
 Los padres Millennials y Gen-Z que crecieron con alta exposición a Internet, están ávidos de encontrar experiencias híbridas que les permitan emplear estratégicamente la tecnología para estimular el desarrollo de sus hijo(a)s de 2 a 5 años. La oferta de contenido bilingüe de calidad para menores de 5 años integrado con experiencias educativas híbridas (físico - digital), es aún muy reducida.
 
-El cliente necesita desarrollar una experiencia educativa para menores de 5 años. Combinar música, video, personajes ilustrados, materiales didácticos e interacción, para estimular los sentidos y las emociones de los más pequeños. Busca aportar en el desarrollo de su percepción del mundo, a través del aprovechamiento inteligente de la tecnología a su alcance y de la conectividad global multi-cultural / multi-lenguaje propios de internet.
+El cliente necesita desarrollar una experiencia educativa para niños 2 a 6 años. Combinar música, video, personajes ilustrados, materiales didácticos e interacción, para estimular los sentidos y las emociones de los más pequeños. Busca aportar en el desarrollo de su percepción del mundo, a través del aprovechamiento inteligente de la tecnología a su alcance y de la conectividad global multi-cultural / multi-lenguaje propios de internet.
 <p align="center"><img width="200" alt=“captura home” src="https://user-images.githubusercontent.com/116796494/227921674-8ea4bb3e-74ba-4e69-acea-534b49feffbd.png"></p>
 
 ## :mag: Detalles tecnicos del Proyecto
@@ -44,6 +44,7 @@ Hay que estar encendido el Xampp o Mamp para que funcione en el navegador. Despu
 * [Git/GitHub](https://github.com/orgs/micukids/repositories)
 * Visual Studio Code
 * Xampp/Mamp
+* Postman
 
 ## :tv: Demo
 
