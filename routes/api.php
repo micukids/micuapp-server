@@ -11,7 +11,7 @@ use App\Http\Controllers\API\DownloadController;
 
 Route::post('register', [AuthController::class,'register'])->name('signUp');
 Route::post('login', [AuthController::class,'login']);
-Route::post('contact', [ContactController::class,'store']);
+Route::post('contact', [ContactController::class,'store'])->name('contactStore');
 
 Route::middleware(['auth:sanctum', 'ability:server:admin'])->group(function () {
     Route::get('/checkingAuthenticated', function () {
@@ -22,29 +22,29 @@ Route::middleware(['auth:sanctum', 'ability:server:admin'])->group(function () {
     });
     
     Route::controller(LetterController::class)->group(function () {
-        Route::post('/letter', 'store');
-        Route::get('/letter/{id}', 'show');
-        Route::put('/letter/{id}', 'update');
-        Route::delete('/letter/{id}', 'destroy');
+        Route::post('/letter', 'store')->name('letterStore');
+        Route::get('/letter/{id}', 'show')->name('letterShow');
+        Route::put('/letter/{id}', 'update')->name('letterUpdate');
+        Route::delete('/letter/{id}', 'destroy')->name('letterDestroy');
     });
 
     Route::controller(SuggestionController::class)->group(function () {
-        Route::post('/suggestion', 'store');
-        Route::get('/suggestion/{id}', 'show');
-        Route::put('/suggestion/{id}', 'update');
-        Route::delete('/suggestion/{id}', 'destroy');
+        Route::post('/suggestion', 'store')->name('suggestionStore');
+        Route::get('/suggestion/{id}', 'show')->name('suggestionShow');
+        Route::put('/suggestion/{id}', 'update')->name('suggestionUpdate');
+        Route::delete('/suggestion/{id}', 'destroy')->name('suggestionDestroy');
     });
     
     Route::controller(ContactController::class)->group(function () {
         Route::get('contacts','index');
-        Route::delete('/contact/{id}', 'destroy');
+        Route::delete('/contact/{id}', 'destroy')->name('contactDestroy');
     });
 
     Route::controller(DownloadController::class)->group(function () {
-        Route::post('/download', 'store');
-        Route::get('/download/{id}', 'show');
-        Route::put('/download/{id}', 'update');
-        Route::delete('/download/{id}', 'destroy');
+        Route::post('/download', 'store')->name('downloadStore');
+        Route::get('/download/{id}', 'show')->name('downloadShow');
+        Route::put('/download/{id}', 'update')->name('downloadUpdate');
+        Route::delete('/download/{id}', 'destroy')->name('downloadDestroy');
     });
 });
 
@@ -54,7 +54,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
 });
 
 Route::controller(LetterController::class)->group(function () {
-    Route::get('/letters', 'index');
+    Route::get('/letters', 'index')->name('letters');
     Route::get('/vowels', 'showvowels');
 });
 
