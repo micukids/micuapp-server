@@ -11,6 +11,24 @@ use App\Models\User;
 class UserTest extends TestCase
 {
     use RefreshDatabase;
+
+    public function test_user_register()
+    {
+        $this->withoutExceptionHandling();
+
+        $response = $this->post(route('signUp'),
+            [
+                'name' => 'Thiago',
+                'parent' => 'Julio',
+                'email' => 'juliomerino@gmail.com',
+                'password' => 'password01',
+            ]);
+
+        $response
+            ->assertStatus(200);
+            $this->assertCount(1, User::all());
+    }
+
     public function test_user_duplication()
     {
         $user1 = User::make([
@@ -30,21 +48,34 @@ class UserTest extends TestCase
         $this->assertTrue($user1->email != $user2->email);
     }
 
-    public function test_user_creation()
-    {
-        $this->withoutExceptionHandling();
+    public function test_user_login()
+        {
 
-        $response = $this->post(route('signUp'),
-            [
+            $this->withoutExceptionHandling();
+
+            $user = User::factory()->create(
+                [
                 'name' => 'Thiago',
                 'parent' => 'Julio',
                 'email' => 'juliomerino@gmail.com',
-                'password' => 'password01',
-                
+                'password' => 'password'
+            ]
+        );
+
+            $response = $this->post(route('logIn'),[
+                'email' => 'juliomerino@gmail.com',
+                'password' => 'password',
             ]);
 
-        $response
-            ->assertStatus(200);
-            $this->assertCount(1, User::all());
-    }
+            $this->actingAs($user)->get('http://localhost:3000/');
+                $response->assertStatus(200);
+            
+            //$response->assertRedirect('http://localhost:3000/');
+            
+            //$response->assertStatus(200);
+            
+            //$this->assertAuthenticated($guard=null);
+        
+
+        }
 }
