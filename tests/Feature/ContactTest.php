@@ -41,4 +41,21 @@ class ContactTest extends TestCase
         $this->assertEquals(0, Contact::count());
 
     }
+
+    public function test_admin_can_see_contacts_messages_page()
+    {
+        $this->withExceptionHandling();
+
+        $admin = User::factory()->create(['role_as' => 1]);
+        $contact = Contact::factory()->create();
+        $this->assertEquals(1, Contact::count());
+        $response = $this->actingAs($admin)->get(route('contacts', [
+            'id' => $contact->id
+        ]));
+        $response->assertStatus(200)
+        ->assertSee($contact->name)
+        ->assertSee($contact->email)
+        ->assertSee($contact->subject)
+        ->assertSee($contact->message);
+    }
 }
