@@ -90,4 +90,21 @@ class LetterTest extends TestCase
         $this->assertEquals(0, Letter::count());
     }
 
+    public function test_user_can_see_vowels(){
+
+        $this->withExceptionHandling();
+
+        $vowels = Letter::showvowels();
+        //var_dump($vowels);
+        //dd();
+        //$this->assertCount(5, $vowels);
+        //$this->withExceptionHandling();
+
+        //$response = $this->get('http://localhost:3000');
+        $response = $this->$vowels = Letter::showvowels();
+
+        //$response->assertJsonIsArray($vowels);
+        $response-> $this->assertCount(5, $vowels);
+      }
+
 }
