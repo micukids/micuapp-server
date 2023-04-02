@@ -12,6 +12,24 @@ class LetterTest extends TestCase
 {
     use RefreshDatabase;
 
+    public function test_user_can_see_letters()
+    {
+        $this->withExceptionHandling();
+
+        $user = User::factory()->create();
+        $letter = Letter::factory()->create();
+        
+        $this->assertEquals(1, Letter::count());
+
+        $response = $this->actingAs($user)->get(route('letters', [
+            'id' => $letter->id
+        ]));
+
+        $response->assertStatus(200)
+        ->assertSee($letter->letter)
+        ->assertSee($letter->type);
+    }
+
     public function test_admin_can_store_a_letter()
     {
         $this->withExceptionHandling();

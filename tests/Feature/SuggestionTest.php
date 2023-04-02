@@ -11,6 +11,25 @@ use App\Models\User;
 class SuggestionTest extends TestCase
 {
     use RefreshDatabase;
+
+    public function test_user_can_see_suggestions_page()
+    {
+        $this->withExceptionHandling();
+
+        $user = User::factory()->create();
+        $suggestion = Suggestion::factory()->create();
+        
+        $this->assertEquals(1, Suggestion::count());
+
+        $response = $this->actingAs($user)->get(route('suggestions', [
+            'id' => $suggestion->id
+        ]));
+
+        $response->assertStatus(200)
+        ->assertSee($suggestion->title)
+        ->assertSee($suggestion->description);
+    }
+
     public function test_admin_can_store_a_suggestion()
     {
         $this->withExceptionHandling();

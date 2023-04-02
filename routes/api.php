@@ -36,7 +36,7 @@ Route::middleware(['auth:sanctum', 'ability:server:admin'])->group(function () {
     });
     
     Route::controller(ContactController::class)->group(function () {
-        Route::get('contacts','index');
+        Route::get('contacts','index')->name('contacts');
         Route::delete('/contact/{id}', 'destroy')->name('contactDestroy');
     });
 
@@ -58,8 +58,8 @@ Route::controller(LetterController::class)->group(function () {
     Route::get('/vowels', 'showvowels');
 });
 
-Route::get('suggestions', [SuggestionController::class, 'index']);
+Route::get('suggestions', [SuggestionController::class, 'index'])->name('suggestions');
 
 Route::controller(DownloadController::class)->group(function () {
-    Route::get('/downloads', 'index');
+    Route::get('/downloads', 'index')->name('downloads');
 });
