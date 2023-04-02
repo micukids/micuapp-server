@@ -10,25 +10,65 @@ use App\Models\User;
 
 class UserTest extends TestCase
 {
-    //use RefreshDatabase;
-    /**
-     * A basic feature test example.
-     */
-    /* public function test_the_application_returns_a_successful_response(): void
-    {
-        $this->withExceptionHandling();
+    use RefreshDatabase;
 
-        Sanctum::actingAs(
-            User::factory()->create([
-                'name'=>'maria',
-                'parent'=>'maria',
-                'email'=>'maria@gmail.com',
-                'password'=>'password',
-            ])
+    public function test_user_can_register()
+    {
+        $this->withoutExceptionHandling();
+
+        $response = $this->post(route('signUp'),
+            [
+                'name' => 'Thiago',
+                'parent' => 'Julio',
+                'email' => 'juliomerino@gmail.com',
+                'password' => 'password01',
+            ]);
+
+        $response
+            ->assertStatus(200);
+            $this->assertCount(1, User::all());
+    }
+
+    public function test_user_do_not_duplicate()
+    {
+        $user1 = User::make([
+            'name' => 'Thiago',
+            'parent' => 'Julio',
+            'email' => 'julio@gmail.com',
+            'password' => 'password01'
+        ]);
+
+        $user2 = User::make([
+            'name' => 'Thiago',
+            'parent' => 'Julio',
+            'email' => 'juliomerino@gmail.com',
+            'password' => 'password01'
+        ]);
+
+        $this->assertTrue($user1->email != $user2->email);
+    }
+
+    public function test_user_can_login()
+        {
+
+            $this->withoutExceptionHandling();
+
+            $user = User::factory()->create(
+                [
+                'name' => 'Thiago',
+                'parent' => 'Julio',
+                'email' => 'juliomerino@gmail.com',
+                'password' => 'password'
+            ]
         );
 
-        $response = $this->get('/');
+            $response = $this->post(route('logIn'),[
+                'email' => 'juliomerino@gmail.com',
+                'password' => 'password',
+            ]);
 
-        $response->assertStatus(200);
-    } */
+            $this->actingAs($user)->get('http://localhost:3000/');
+                $response->assertStatus(200);
+
+        }
 }

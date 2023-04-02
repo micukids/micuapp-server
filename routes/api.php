@@ -10,7 +10,7 @@ use App\Http\Controllers\API\DownloadController;
 
 
 Route::post('register', [AuthController::class,'register'])->name('signUp');
-Route::post('login', [AuthController::class,'login']);
+Route::post('login', [AuthController::class,'login'])->name('logIn');
 Route::post('contact', [ContactController::class,'store'])->name('contactStore');
 
 Route::middleware(['auth:sanctum', 'ability:server:admin'])->group(function () {
