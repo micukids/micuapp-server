@@ -11,6 +11,21 @@ use App\Models\User;
 class DownloadTest extends TestCase
 {
     use RefreshDatabase;
+    
+    public function test_user_can_see_downloads_page()
+    {
+        $this->withExceptionHandling();
+
+        $user = User::factory()->create();
+        $download = Download::factory()->create();
+        $this->assertEquals(1, Download::count());
+        $response = $this->actingAs($user)->get(route('downloads', [
+            'id' => $download->id
+        ]));
+        $response->assertStatus(200)
+        ->assertSee($download->description);
+    }
+
     public function test_admin_can_store_a_download()
     {
         $this->withExceptionHandling();
