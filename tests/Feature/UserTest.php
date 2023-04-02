@@ -12,7 +12,7 @@ class UserTest extends TestCase
 {
     use RefreshDatabase;
 
-    public function test_user_register()
+    public function test_user_can_register()
     {
         $this->withoutExceptionHandling();
 
@@ -29,7 +29,7 @@ class UserTest extends TestCase
             $this->assertCount(1, User::all());
     }
 
-    public function test_user_duplication()
+    public function test_user_do_not_duplicate()
     {
         $user1 = User::make([
             'name' => 'Thiago',
@@ -48,7 +48,7 @@ class UserTest extends TestCase
         $this->assertTrue($user1->email != $user2->email);
     }
 
-    public function test_user_login()
+    public function test_user_can_login()
         {
 
             $this->withoutExceptionHandling();
@@ -69,13 +69,6 @@ class UserTest extends TestCase
 
             $this->actingAs($user)->get('http://localhost:3000/');
                 $response->assertStatus(200);
-            
-            //$response->assertRedirect('http://localhost:3000/');
-            
-            //$response->assertStatus(200);
-            
-            //$this->assertAuthenticated($guard=null);
-        
 
         }
 }
